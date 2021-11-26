@@ -1,9 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
-class UserItem extends Component {
-  
-  render() {
-      const { avatar_url, login, html_url } = this.props.user;
+const UserItem = props => {
+      const { avatar_url, login, html_url } = props.user;
     return (
       <div className="card text-center">
         <img
@@ -18,7 +16,6 @@ class UserItem extends Component {
         </div>
       </div>
     );
-  }
 }
 
 export default UserItem;
