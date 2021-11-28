@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 
 
 
-const Navbar = props => {
+const Navbar = ({ icon, title }) => {
  
     return (
       <nav className="navbar bg-primary">
         <h1>
-          <ion-icon name={props.icon}></ion-icon>
-          {props.title}
+          <ion-icon name={icon}></ion-icon>
+          {title}
         </h1>
       </nav>
     );
