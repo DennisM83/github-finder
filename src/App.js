@@ -6,7 +6,7 @@ import Users from "./components/users/Users";
 
 class App extends Component {
   state = {
-    user: [],
+    users: [],
     loading: false
   }
   async componentDidMount() {
