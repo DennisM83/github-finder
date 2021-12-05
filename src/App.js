@@ -28,7 +28,13 @@ class App extends Component {
     this.setState({ users: res.data.items, loading: false });
   }
 
-  clearUsers = () => this.setState({ users: [], loading: false });
+  clearUsers = async () => {
+    const res = await axios.get(
+      `https://api.github.com/users?client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
+    );
+
+    this.setState({ users: res.data, loading: false });
+  }
 
   render() {
     return (
